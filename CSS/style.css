@@ -153,3 +153,7 @@ p{
     text-align: center;
     text-wrap: wrap;
 }
+
+textarea{
+    background-color: bisque;
+}
