@@ -180,3 +180,40 @@ tr td{
 caption{
     padding-bottom: 20px;
 }
+
+#animacija {
+    display: flex;
+    justify-content:right;
+    margin-right: 50px;
+}
+
+#animacija > .okvir {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#animacija .okvir > .krug {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(247, 239, 239);
+    animation: skok 1.5s infinite ease-in-out;
+}
+
+#animacija .krug:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+#animacija .krug:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes skok {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}
