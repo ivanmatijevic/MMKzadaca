@@ -217,3 +217,48 @@ caption{
         transform: translateY(-40px);
     }
 }
+
+.scene {
+    perspective: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: okretanje 4s infinite linear;
+}
+
+.card > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.front {
+    background: #660000;
+}
+
+.back {
+    background: #da8611;
+    transform: rotateY(180deg);
+}
+
+@keyframes okretanje {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
